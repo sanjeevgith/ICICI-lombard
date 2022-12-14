@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Signup</h1>
+                    <h6>Register Yourself</h6>
+                </div>
+                <form>
+                    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Name</label>
+                            <input type="text" placeholder="Name" formControlName="fullname" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1">Role</label>
+                            <select class="form-control" formControlName="role">
+                                <option value="" disabled selected hidden>Select</option>
+                                <option value="administrator">administrator</option>
+                                <option value="user">user</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" placeholder="Enter Email" formControlName="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" placeholder="Enter Password" formControlName="password" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Signup</button>
+                    </form>
+                    <a style="color: white ; margin-top:5px;" routerLink="/login">Already register? click to login!!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

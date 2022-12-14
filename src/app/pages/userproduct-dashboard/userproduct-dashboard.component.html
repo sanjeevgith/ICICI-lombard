@@ -1,0 +1,16 @@
+<body style="background-color: antiquewhite; height: 900px;">
+    <div class="container" style="padding-top: 20px;">
+        <div class="row" style="padding: 10px;">
+            <div class="card" style="width: 18rem; padding: 10px;" *ngFor="let row of finalresponse">
+                <img class="card-img-top" src={{row.pimage}} alt="Card image cap" style="height: 100px;">
+                <div class="card-body">
+                    <h5 class="card-title">Name: {{row.pname}}</h5>
+                    <p class="card-text">Catagory: {{row.catagory}}</p>
+                    <p class="card-text">Price: {{row.price}}</p>
+                    <p class="card-text">Rating: {{row.rating}}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

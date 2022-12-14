@@ -1,0 +1,91 @@
+<nav class="navbar navbar-light " style="background-color: rgb(216, 115, 53);">
+    <div class="container-fluid">
+        <h1 style="color: rgb(197, 136, 45);"></h1>
+        <div class="d-flex">
+            <button (click)="clickAddEmploye()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn btn-success">Add Product</button>
+        </div>
+    </div>
+</nav>
+
+
+<body style="background-color: antiquewhite; height: 900px;padding-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="card" style="width: 18rem;" *ngFor="let row of finalresponse">
+                <img class="card-img-top" src={{row.pimage}} alt="Card image cap" style="height: 100px;">
+                <div class="card-body">
+                    <h5 class="card-title">Name: {{row.pname}}</h5>
+                    <p class="card-text">Catagory: {{row.catagory}}</p>
+                    <p class="card-text">Price: {{row.price}}</p>
+                    <p class="card-text">Rating: {{row.rating}}</p>
+                    <button (click)="onEditproduct(row)" class="btn btn-info" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Edit</button>
+                    <button (click)="deleteproduct(row)" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="productform">
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Product Name</label>
+                        <input type="text" formControlName="pname" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Product Image</label>
+                        <input type="text" placeholder="Enter Image Url" formControlName="pimage" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1">Product Catagory</label>
+                        <select class="form-control" formControlName="catagory">
+                            <option value="" disabled selected hidden>Select</option>
+                            <option value="credit card">Credit card</option>
+                            <option value="debit card">Debit Card</option>
+                            <option value="checkbook">Checkbook</option>
+                            <option value="passbook">Passbook</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Price</label>
+                        <input type="number" formControlName="price" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1">Product Rating</label>
+                        <select class="form-control" formControlName="rating">
+                            <option value="" disabled selected hidden>Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="addproducts()">Add Item</button>
+                <button type="button" (click)="Updateproduct()" class="btn btn-primary mx-3">Update</button>
+
+            </div>
+        </div>
+    </div>
+</div>

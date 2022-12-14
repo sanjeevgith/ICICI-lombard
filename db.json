@@ -1,0 +1,59 @@
+{
+  "signupUsers": [
+    {
+      "fullname": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "role": "administrator",
+      "id": 1
+    },
+    {
+      "fullname": "new",
+      "email": "user@gmail.com",
+      "password": "user",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "fullname": "new",
+      "email": "new@gmail.com",
+      "password": "new",
+      "role": "user",
+      "id": 3
+    }
+  ],
+  "productdata": [
+    {
+      "pname": "credit1",
+      "pimage": "https://trak.in/wp-content/uploads/2016/03/ICICI-Bank.jpg",
+      "catagory": "credit card",
+      "price": 1,
+      "rating": "1",
+      "id": 1
+    },
+    {
+      "pname": "debit",
+      "pimage": "https://d1hl0z0ja1o93t.cloudfront.net/wp-content/uploads/2016/10/22133849/ICICI-bank-atm-card.jpg",
+      "catagory": "debit card",
+      "price": 2,
+      "rating": "2",
+      "id": 2
+    },
+    {
+      "pname": "card",
+      "pimage": "https://www.applykaroo.com/content_img/icici-bank-coral-credit-card.jpg",
+      "catagory": "credit card",
+      "price": 12121,
+      "rating": "4",
+      "id": 3
+    },
+    {
+      "pname": "checkbook",
+      "pimage": "https://findyourbank.in/images/icici-bank-cheque-book.jpg",
+      "catagory": "checkbook",
+      "price": 1222,
+      "rating": "2",
+      "id": 4
+    }
+  ]
+}
