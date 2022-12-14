@@ -14,13 +14,15 @@ export class UserproductDashboardComponent {
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
 
+  
+
   gfg = 0;
 
   ngOnInit(): void {
     this.getproduct();
   }
 
-
+  ratingselect:any
 
   finalresponse: any
   getproduct() {

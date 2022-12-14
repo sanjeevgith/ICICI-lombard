@@ -1,6 +1,8 @@
 <nav class="navbar navbar-light " style="background-color: rgb(216, 115, 53);">
     <div class="container-fluid">
-        <h1 style="color: rgb(18, 16, 13); padding-right: 20px;"><img style="width: 100px;padding-right: 20px;" src="https://static.businessworld.in/article/article_extra_large_image/1584450345_yDoXEg_ICICI_Bank_Logo.jpg">ICICI Products</h1>
+        <h1 style="color: rgb(18, 16, 13); padding-right: 20px;"><img style="width: 100px;padding-right: 20px;"
+                src="https://static.businessworld.in/article/article_extra_large_image/1584450345_yDoXEg_ICICI_Bank_Logo.jpg">ICICI
+            Products</h1>
         <div class="d-flex">
             <a routerLink="/login" style="color: black;">logout</a>
         </div>
@@ -9,8 +11,16 @@
 
 
 
+
+
+
 <body style="background-color: antiquewhite; height: 900px;">
-    <div class="container">
+    <div class="container" style="padding: 10px;">
+        <!-- <div class="row col-md-4">
+            <label>Select Based On Rating</label>
+            <ng-select2 style="width: 500px;" [(ngModel)]="ratingselect" class="multi-filter">
+            </ng-select2>
+        </div> -->
         <div class="row" style="padding: 10px;">
             <div class="card" style="width: 18rem; padding: 10px;" *ngFor="let row of finalresponse">
                 <img class="card-img-top" src={{row.pimage}} alt="Card image cap" style="height: 100px;">
@@ -19,7 +29,7 @@
                     <p class="card-text">Catagory: {{row.catagory}}</p>
                     <p class="card-text">Price: {{row.price}}</p>
                     <p class="card-text">Rating: {{row.rating}}</p>
-                    <ngb-rating [max]="5" [(rate)]="gfg"></ngb-rating> 
+                    <ngb-rating [max]="5" [(rate)]="gfg"></ngb-rating>
 
                 </div>
             </div>

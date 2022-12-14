@@ -8,7 +8,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
 import { HttpClient, HttpClientModule} from '@angular/common/http'
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserproductDashboardComponent } from './pages/userproduct-dashboard/userproduct-dashboard.component';
 
@@ -26,7 +26,8 @@ import { UserproductDashboardComponent } from './pages/userproduct-dashboard/use
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
