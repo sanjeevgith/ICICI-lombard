@@ -1,10 +1,12 @@
 <nav class="navbar navbar-light " style="background-color: rgb(216, 115, 53);">
     <div class="container-fluid">
-        <h1 style="color: rgb(18, 16, 13);"><img style="width: 100px;" src="https://static.businessworld.in/article/article_extra_large_image/1584450345_yDoXEg_ICICI_Bank_Logo.jpg"> Catalogue</h1>
+        <h1 style="color: rgb(18, 16, 13);"><img style="width: 100px;"
+                src="https://static.businessworld.in/article/article_extra_large_image/1584450345_yDoXEg_ICICI_Bank_Logo.jpg">
+            Catalogue</h1>
         <div class="d-flex">
             <button (click)="clickAddEmploye()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                 class="btn btn-success">Add Product</button>
-                <a routerLink="/login" style="color: black;padding-left: 50px;">logout</a>
+            <a routerLink="/login" style="color: black;padding-left: 50px;">logout</a>
         </div>
     </div>
 </nav>
@@ -13,7 +15,7 @@
 <body style="background-color: antiquewhite; height: 900px;padding-top: 20px;">
     <div class="container">
         <div class="row">
-            <div class="card" style="width: 18rem;" *ngFor="let row of finalresponse">
+            <div class="card" style="width: 18rem;padding: 10px;" *ngFor="let row of finalresponse">
                 <img class="card-img-top" src={{row.pimage}} alt="Card image cap" style="height: 100px;">
                 <div class="card-body">
                     <h5 class="card-title">Name: {{row.pname}}</h5>
@@ -21,7 +23,7 @@
                     <p class="card-text">Price: {{row.price}} -INR</p>
                     <p>
                         Rating: <ngb-rating [max]="5" [(rate)]="row.rating" [readonly]="true"></ngb-rating>
-                    </p> 
+                    </p>
                     <button (click)="onEditproduct(row)" class="btn btn-info" type="button" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">Edit</button>
                     <button (click)="deleteproduct(row)" class="btn btn-danger mx-3">Delete</button>
@@ -85,8 +87,9 @@
             </div>
             <div class="modal-footer">
                 <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button"  *ngIf="showAdd" class="btn btn-primary" (click)="addproducts() ">Add Item</button>
-                <button type="button" *ngIf="showUpdate" (click)="Updateproduct()" class="btn btn-primary mx-3">Update</button>
+                <button type="button" *ngIf="showAdd" class="btn btn-primary" (click)="addproducts() ">Add Item</button>
+                <button type="button" *ngIf="showUpdate" (click)="Updateproduct()"
+                    class="btn btn-primary mx-3">Update</button>
 
             </div>
         </div>
