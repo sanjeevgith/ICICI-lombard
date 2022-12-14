@@ -11,8 +11,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: hsla(205,46%,30%,1);
-    background: linear-gradient(90deg,hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+    background: rgb(216, 130, 69);
+    background: linear-gradient(90deg,rgb(116, 76, 36)0%,rgb(239, 133, 5)100%);
 }
 
 .card h1,h6{

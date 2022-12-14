@@ -12,20 +12,20 @@
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                             <input type="email" placeholder="Enter Email" formControlName="email" class="form-control"
                                 id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <div id="emailHelp" class="form-text" style="color: black;">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" placeholder="Enter Password" formControlName="password"
                                 class="form-control" id="exampleInputPassword1">
                         </div><br>
-                        <button type="submit" class="btn btn-primary" style="width: 150px;">Admin Login</button>
+                        <button type="submit" class="btn btn-success" style="width: 150px;">Admin Login</button>
                     </form><br>
                     <div>
-                        <button (click)="Userlogin()" class="btn btn-primary" style="width: 150px;">User Login</button>
+                        <button (click)="Userlogin()" class="btn btn-success" style="width: 150px;">User Login</button>
                     </div>
                     <br>
-                    <a routerLink="/signup" style="text-align: center;">new user? click to signup!!</a>
+                    <a routerLink="/signup" style="text-align: center;color: black;">new user? click to signup!!</a>
                 </div>
             </div>
         </div>
