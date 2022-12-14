@@ -20,7 +20,7 @@
                     <p class="card-text">Catagory: {{row.catagory}}</p>
                     <p class="card-text">Price: {{row.price}}</p>
                     <p>
-                        Rating: <ngb-rating [max]="5" [(rate)]="row.rating"></ngb-rating>
+                        Rating: <ngb-rating [max]="5" [(rate)]="row.rating" [readonly]="true"></ngb-rating>
                     </p> 
                     <button (click)="onEditproduct(row)" class="btn btn-info" type="button" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">Edit</button>
