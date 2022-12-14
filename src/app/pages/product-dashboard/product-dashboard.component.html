@@ -19,7 +19,9 @@
                     <h5 class="card-title">Name: {{row.pname}}</h5>
                     <p class="card-text">Catagory: {{row.catagory}}</p>
                     <p class="card-text">Price: {{row.price}}</p>
-                    <p class="card-text">Rating: {{row.rating}}</p>
+                    <p>
+                        Rating: <ngb-rating [max]="5" [(rate)]="row.rating"></ngb-rating>
+                    </p> 
                     <button (click)="onEditproduct(row)" class="btn btn-info" type="button" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">Edit</button>
                     <button (click)="deleteproduct(row)" class="btn btn-danger mx-3">Delete</button>
