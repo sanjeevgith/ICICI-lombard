@@ -20,6 +20,9 @@
             <label>Select Based On Rating</label>
             <ng-select2 style="width: 500px;" [(ngModel)]="ratingselect" class="multi-filter">
             </ng-select2>
+            <label>Select Based On Price</label>
+            <ng-select2 style="width: 500px;" [(ngModel)]="priceselect" class="multi-filter">
+            </ng-select2>
         </div> -->
         <div class="row" style="padding: 10px;">
             <div class="card" style="width: 18rem; padding: 10px;" *ngFor="let row of finalresponse">
@@ -29,7 +32,7 @@
                     <p class="card-text">Catagory: {{row.catagory}}</p>
                     <p class="card-text">Price: {{row.price}}</p>
                     <p class="card-text">Rating: {{row.rating}}</p>
-                    <ngb-rating [max]="5" [(rate)]="gfg"></ngb-rating>
+                    User Rating  <ngb-rating [max]="5" [(rate)]="gfg"></ngb-rating>
 
                 </div>
             </div>
