@@ -11,6 +11,8 @@ export class ProductDashboardComponent {
 
 
   productform!: FormGroup;
+  showAdd!: boolean;
+  showUpdate!: boolean;
 
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
@@ -75,6 +77,8 @@ export class ProductDashboardComponent {
   employeeModelObj: any
   rowid: any
   onEditproduct(row: any) {
+    this.showAdd = false;
+    this.showUpdate = true;
     this.rowid = row.id;
     console.log(row.id)
     this.productform.controls['pname'].setValue(row.pname)
@@ -103,10 +107,11 @@ export class ProductDashboardComponent {
 
   clickAddEmploye() {
     this.productform.reset();
+    this.showAdd = true;
+    this.showUpdate = false;
   }
 
 
-
-
+ 
 
 }

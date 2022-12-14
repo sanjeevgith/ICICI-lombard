@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light " style="background-color: rgb(216, 115, 53);">
     <div class="container-fluid">
-        <h1 style="color: rgb(18, 16, 13);"><img style="width: 100px;" src="https://static.businessworld.in/article/article_extra_large_image/1584450345_yDoXEg_ICICI_Bank_Logo.jpg">ICICI Products</h1>
+        <h1 style="color: rgb(18, 16, 13); padding-right: 20px;"><img style="width: 100px;padding-right: 20px;" src="https://static.businessworld.in/article/article_extra_large_image/1584450345_yDoXEg_ICICI_Bank_Logo.jpg">ICICI Products</h1>
         <div class="d-flex">
             <a routerLink="/login" style="color: black;">logout</a>
         </div>
@@ -19,7 +19,9 @@
                     <p class="card-text">Catagory: {{row.catagory}}</p>
                     <p class="card-text">Price: {{row.price}}</p>
                     <p class="card-text">Rating: {{row.rating}}</p>
+                    <ngb-rating [max]="5" [(rate)]="gfg"></ngb-rating> 
 
+                  
                 </div>
             </div>
         </div>

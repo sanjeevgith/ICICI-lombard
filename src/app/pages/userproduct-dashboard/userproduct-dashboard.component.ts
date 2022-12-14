@@ -14,7 +14,7 @@ export class UserproductDashboardComponent {
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
 
-  rating = 0;
+  gfg = 0;
 
   ngOnInit(): void {
     this.getproduct();
@@ -30,5 +30,8 @@ export class UserproductDashboardComponent {
     })
   }
 
+
+
+ 
 
 }
