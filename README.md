@@ -37,12 +37,12 @@ password: `new`
 
 ## project details
 
-## 1 After the ng serve Default page navigate to Login page
-## 2 there are two type of user role. administrator and user
-## if you don't have login credential an you are  new user/admin then go to the signup page.
-## inside the signup page they ask for role. after the signup succesfully you have to  navigate to the login page.
-## administrator role have permision to update ,delete and add products.
-## user role have only persmision to read the products.
+ 1 After the ng serve Default page navigate to Login page
+ 2 there are two type of user role. administrator and user
+ 3 if you don't have login credential an you are  new user/admin then go to the signup page.
+ 4 inside the signup page they ask for role. after the signup succesfully you have to  navigate to the login page.
+ 5 administrator role have permision to update ,delete and add products.
+ 6 user role have only persmision to read the products.
 
 ## Build
 
@@ -55,3 +55,10 @@ Git URL `https://github.com/sanjeevgith/ICICI-lombard.git`
 
 ## Credentials for login
 
+## administration
+ email : `admin@gmail.com`
+ password : `admin`
+
+ ## user
+ email : `user@gmail.com`
+ password : `user`

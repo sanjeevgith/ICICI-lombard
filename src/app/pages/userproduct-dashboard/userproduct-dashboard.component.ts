@@ -14,7 +14,7 @@ export class UserproductDashboardComponent {
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
 
-  
+
 
   gfg = 0;
 
@@ -22,7 +22,13 @@ export class UserproductDashboardComponent {
     this.getproduct();
   }
 
-  ratingselect:any
+  ratingselect: any
+
+
+
+
+
+
 
   finalresponse: any
   getproduct() {
@@ -32,8 +38,25 @@ export class UserproductDashboardComponent {
     })
   }
 
+  finalresponsesort: any
+  sortdatabyprice() {
+    this.http.get("http://localhost:3000/productdata").subscribe(responseList => {
+      this.finalresponsesort = responseList;
+      console.log(this.finalresponsesort)
+      this.finalresponse = [];
+      if (this.finalresponsesort) {
+        let newdata = this.finalresponsesort.sort((a: any, b: any) => a.price - b.price)
+        this.finalresponse = newdata
+      } else {
+        let newdata = this.finalresponsesort.sort((a: any, b: any) => b.price - a.price)
+        this.finalresponse = newdata
+      }
+    })
 
 
- 
+  }
+
+
+
 
 }
