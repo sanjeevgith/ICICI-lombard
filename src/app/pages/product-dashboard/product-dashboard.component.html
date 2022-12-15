@@ -15,18 +15,20 @@
 <body style="background-color: antiquewhite; height: 900px;padding-top: 20px;">
     <div class="container">
         <div class="row">
-            <div class="card" style="width: 18rem;padding: 10px;" *ngFor="let row of finalresponse">
-                <img class="card-img-top" src={{row.pimage}} alt="Card image cap" style="height: 100px;">
-                <div class="card-body">
-                    <h5 class="card-title">Name: {{row.pname}}</h5>
-                    <p class="card-text">Catagory: {{row.catagory}}</p>
-                    <p class="card-text">Price: {{row.price}} -INR</p>
-                    <p>
-                        Rating: <ngb-rating [max]="5" [(rate)]="row.rating" [readonly]="true"></ngb-rating>
-                    </p>
-                    <button (click)="onEditproduct(row)" class="btn btn-info" type="button" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Edit</button>
-                    <button (click)="deleteproduct(row)" class="btn btn-danger mx-3">Delete</button>
+            <div class="col" *ngFor="let row of finalresponse" style="padding-bottom: 10px;">
+                <div class="card" style="width: 18rem;padding: 10px;">
+                    <img class="card-img-top" src={{row.pimage}} alt="Card image cap" style="height: 100px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: {{row.pname}}</h5>
+                        <p class="card-text">Catagory: {{row.catagory}}</p>
+                        <p class="card-text">Price: {{row.price}} -INR</p>
+                        <p>
+                            Rating: <ngb-rating [max]="5" [(rate)]="row.rating" [readonly]="true"></ngb-rating>
+                        </p>
+                        <button (click)="onEditproduct(row)" class="btn btn-info" type="button" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Edit</button>
+                        <button (click)="deleteproduct(row)" class="btn btn-danger mx-3">Delete</button>
+                    </div>
                 </div>
             </div>
         </div>
