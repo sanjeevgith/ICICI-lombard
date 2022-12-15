@@ -27,7 +27,9 @@ export class UserproductDashboardComponent {
 
 
 
-
+  defaultsort(){
+    this.getproduct();
+  }
 
 
   finalresponse: any
@@ -52,8 +54,21 @@ export class UserproductDashboardComponent {
         this.finalresponse = newdata
       }
     })
+  }
 
-
+  sortdatabyrating() {
+    this.http.get("http://localhost:3000/productdata").subscribe(responseList => {
+      this.finalresponsesort = responseList;
+      console.log(this.finalresponsesort)
+      this.finalresponse = [];
+      if (this.finalresponsesort) {
+        let newdata = this.finalresponsesort.sort((a: any, b: any) => a.rating - b.rating)
+        this.finalresponse = newdata
+      } else {
+        let newdata = this.finalresponsesort.sort((a: any, b: any) => b.rating - a.rating)
+        this.finalresponse = newdata
+      }
+    })
   }
 
 

@@ -54,6 +54,14 @@
       "price": 1222,
       "rating": "2",
       "id": 4
+    },
+    {
+      "pname": "sortdemo",
+      "pimage": "https://bfsi.eletsonline.com/wp-content/uploads/2017/03/icici-bank.jpg",
+      "catagory": "debit card",
+      "price": 1,
+      "rating": "5",
+      "id": 5
     }
   ]
 }
