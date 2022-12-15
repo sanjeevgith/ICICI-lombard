@@ -62,6 +62,14 @@
       "price": 1,
       "rating": "5",
       "id": 5
+    },
+    {
+      "pname": "loan",
+      "pimage": "https://d1bz2uaiqgodxb.cloudfront.net/images/bank-banner/personal-loan/icici-bank-personal-loan.jpg",
+      "catagory": "checkbook",
+      "price": 120,
+      "rating": "4",
+      "id": 6
     }
   ]
 }

@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserproductDashboardComponent } from './pages/userproduct-dashboard/userproduct-dashboard.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UserproductDashboardComponent } from './pages/userproduct-dashboard/use
     SignupComponent,
     ProductDashboardComponent,
     UserproductDashboardComponent,
+    FooterComponent,
     
   ],
   imports: [
