@@ -23,21 +23,25 @@
             <div class="row col-md-4" style="padding-left: 20px;">
                 <button (click)="sortdatabyrating()" style="border: none; background-color: rgb(230, 152, 84); border-radius: 5px;" >Sort By Rating ⬇️</button>
             </div>
-            <div class="row col-md-2" style="padding-left: 20px;">
+            <div class="row col-md-4" style="padding-left: 20px;">
                 <button (click)="defaultsort()" style="border: none; background-color: rgb(230, 152, 84); border-radius: 5px;" >Default ⬇️</button>
             </div>
         </div>
        
+      
         <div class="row" style="padding: 10px;">
-            <div class="card" style="width: 18rem; padding: 10px;" *ngFor="let row of finalresponse">
-                <img class="card-img-top" src={{row.pimage}} alt="Card image cap" style="height: 100px;">
-                <div class="card-body">
-                    <h5 class="card-title">Name: {{row.pname}}</h5>
-                    <p class="card-text">Catagory: {{row.catagory}}</p>
-                    <p class="card-text">Price: {{row.price}}</p>
-                    <p class="card-text">Rating: <ngb-rating [max]="5" [(rate)]="row.rating"></ngb-rating></p>
+            <div class="col" *ngFor="let row of finalresponse" style="padding-bottom: 10px;">
+                <div class="card"  style="width: 18rem; padding: 10px;" >
+                    <img class="card-img-top" src={{row.pimage}} alt="Card image cap" style="height: 100px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: {{row.pname}}</h5>
+                        <p class="card-text">Catagory: {{row.catagory}}</p>
+                        <p class="card-text">Price: {{row.price}}</p>
+                        <p class="card-text">Rating: <ngb-rating [max]="5" [(rate)]="row.rating"></ngb-rating></p>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </body>
